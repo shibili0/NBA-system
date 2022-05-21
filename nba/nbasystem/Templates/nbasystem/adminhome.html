@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+<html>
+    <body>
+        <p>Welcome admin</p>
+        <button type="submit" ><a href="{% url 'home' %}">Register Student</a></button>
+        <button><a href="{% url 'search' %}">Users List</a></button>
+
+        <h1>Register Here</h1>
+
+      <form action="" method="post">
+       {% csrf_token %}
+       <label for="Registration">Student/Faculty Registration</label>
+       <select name="type" id="">
+           <option value="Student">Student</option>
+           <option value="Faculty">Faculty</option>
+       </select>
+        <label for="username">UserName</label>
+        {{form.username}}<br>
+        <label for="first_name">First Name</label>
+        {{form.first_name}}
+        <br>
+
+        <label for="last_name">Last Name</label>
+        {{form.last_name}}
+        <br>
+        <label for="email">Email</label>
+        {{form.email}} <br>
+        <label for="password">Password</label>
+        {{form.password1}}<br>
+        <label for="password">Confirm Password</label>
+        {{form.password2}}  
+        <br>
+
+        <label for="mobile_no.">Contact No.</label>
+        <input type="number" id="num" name="num" placeholder="Enter your mobile number">
+          <br>
+       
+        <input type="submit" value="Register">
+        
+        
+      </form>
+      {{form.errors}}
+      <button type="submit" postion="bottom"><a href="{% url 'home' %}">Back</a></button>
+    </body>
+</html>

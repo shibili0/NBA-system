@@ -1,0 +1,40 @@
+<!-- {% for student in students  %}
+<h1>Students List</h1>
+<p>{{student.fname}} </p>
+    <p>{{student.lname}}</p>
+{% endfor %} -->
+
+ <table>
+
+    <tr>
+        <th>Students List</th>
+    </tr>
+    {% for student in students %}
+    <tr> 
+        <td>{{student.fname}}</td>
+        <td>{{student.lname}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<table>
+    <tr>
+        <th>Faculty List</th>
+    </tr>
+    {% for faculty in facultys %}
+    <tr> 
+        <td>{{faculty.fname}}</td>
+        <td>{{faculty.lname}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<table>
+    <tr>
+        <th>Parent  List</th>
+    </tr>
+    {% for parent in parents %}
+    <tr> 
+        <td>{{parent.fname}}</td>
+        <td>{{parent.lname}}</td>
+    </tr>
+    {% endfor %}
+</table> 
